@@ -1,16 +1,3 @@
-import { html, PolymerElement } from '@polymer/polymer/polymer-element.js';
-
-import '@polymer/iron-meta/iron-meta.js';
-import './src/style-bubbles';
-import './src/style-bars';
-import './src/style-circles';
-import './src/style-dots';
-import './src/style-bounce';
-import './src/style-cube';
-import './src/style-folding';
-import './src/style-default';
-import './src/style-ripple';
-
 /* 
 * ## Description.
 * 
@@ -47,6 +34,19 @@ import './src/style-ripple';
 *   * @polymer
 *   * @demo demo/index.html
  */
+
+import { html, PolymerElement } from '@polymer/polymer/polymer-element.js';
+
+import '@polymer/iron-meta/iron-meta.js';
+import './src/style-bubbles';
+import './src/style-bars';
+import './src/style-circles';
+import './src/style-dots';
+import './src/style-bounce';
+import './src/style-cube';
+import './src/style-folding';
+import './src/style-default';
+import './src/style-ripple';
 
 
 class SpinnerElement extends PolymerElement {
@@ -113,7 +113,6 @@ class SpinnerElement extends PolymerElement {
           }, this.duration);
         }
       }
-
     } catch (error) {
       console.log('no exist');
     }
