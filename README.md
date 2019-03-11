@@ -39,7 +39,7 @@ Custom property | Description | Default
 <html>
   <head>
     <script type="module">
-      import '@polymer/spinner/spinner-element.js';
+      import '.././spinner/spinner-element.js';
     </script>
     <custom-style>
       <style is="custom-style">
@@ -58,7 +58,7 @@ Custom property | Description | Default
 ### In a Polymer 3 element
 ```js
 import {PolymerElement, html} from '@polymer/polymer';
-/* import '@polymer/spinner/spinner-element.js'; */
+import '.././spinner/spinner-element.js';
 
 class SampleElement extends PolymerElement {
   static get template() {
