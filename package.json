@@ -1,9 +1,22 @@
 {
   "name": "spinner-element",
+  "version": "0.1",
+  "description": "the polymer element shows a spinner, which we can select any of the 9 types,",
+  "keywords": [
+    "spinner",
+    "loading",
+    "polymer",
+    "webcomponents"
+  ],
   "main": "spinner-element.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Dacelisl/spinners.git"
+  },
+  "author": "Dacelisl",
+  "license": "MIT",
   "dependencies": {
     "@polymer/iron-meta": "^3.0.1",
-    "@polymer/iron-overlay-behavior": "^3.0.2",
     "@polymer/polymer": "^3.0.0"
   },
   "devDependencies": {

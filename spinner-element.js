@@ -52,6 +52,7 @@ import './src/style-ripple';
 class SpinnerElement extends PolymerElement {
   static get template() {
     return html`
+    
     <iron-meta id="elmeta" ></iron-meta>
     
     <style-bubbles id="bubbles"> </style-bubbles>
@@ -73,18 +74,18 @@ class SpinnerElement extends PolymerElement {
       * visibility of the spinner, by default 'false'
       * @type {Boolean}
       */
-      visible: { type: Boolean, value: false, reflectToAttribute: true, observer: '__visibleChanged' },
+      visible: { type: Boolean, value: false, observer: '__visibleChanged' },
       /**
       * select any of the 9 types (default, bars, bubble, circle, 
       * ripple, points, fold, cube, bounce) by default 'default'
       * @type {String}
       */
-      tipo: { type: String, value: 'default', reflectToAttribute: true, observer: '__tipoChanged' },
+      tipo: { type: String, value: 'default',  observer: '__tipoChanged' },
       /**
       * The spinner-element background-color, default '#b9b5b524'
       * @type {String}
       */
-      color: { type: String, reflectToAttribute: true },
+      color: { type: String },
       /**
       * activity time (milliseconds) of the spinner
       * @type {Number}

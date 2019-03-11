@@ -15,11 +15,11 @@ $_documentContainer.innerHTML = `<dom-module id="default">
   <template>
     <style>
     .lds-spinner {
-        color: red;
+        margin: 100px auto 0;
         display: inline-block;
         position: relative;
-        width: 64px;
-        height: 64px;
+        width: 70px;
+        height: 80px;
       }
       .lds-spinner div {
         transform-origin: 32px 32px;
