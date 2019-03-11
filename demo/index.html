@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>spinner-element demo</title>
+
+  <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+  <script type="module">
+    import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
+    import '@polymer/iron-demo-helpers/demo-snippet';
+  </script>
+
+  <script type="module" src="../spinner-element.js"></script>
+
+  <custom-style>
+    <style is="custom-style" include="demo-pages-shared-styles">
+      #spinner {
+        --background-color-spinner: #f0f000;
+      }
+    </style>
+  </custom-style>
+</head>
+
+<!-- buen dia, he estado desarrollando una app y necesitaba un spinner, encontre un repositorio tuyo (https://github.com/tobiasahlin/SpinKit) y lo he adaptado para ser usado con polymer en mi proyecto, quisiera poder publicarlo para la comunidad pero antes necesito tu aprovacion.
+este es el repositorio del proyecto 
+ -->
+
+<body>
+  <div class="vertical-section-container centered">
+    <h3>Spinner-element demo</h3>
+    <demo-snippet>
+      <template>
+        <spinner-element id="spinner" visible tipo="bars"></spinner-element>
+      </template>
+    </demo-snippet>
+  </div>
+</body>
+
+</html>
