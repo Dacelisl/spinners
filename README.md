@@ -1,3 +1,5 @@
+[! [Publicado en el Directorio de Vaadin] (https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)] (https://vaadin.com/directory/component/ <Dacelisl> <spinner-element>)
+
 # \<spinner-element\>
 
 
