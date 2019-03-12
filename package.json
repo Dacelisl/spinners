@@ -1,6 +1,6 @@
 {
   "name": "spinner-element",
-  "version": "0.1",
+  "version": "0.0.1",
   "description": "the polymer element shows a spinner, which we can select any of the 9 types,",
   "keywords": [
     "spinner",
