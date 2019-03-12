@@ -1,4 +1,6 @@
-[! [Publicado en el Directorio de Vaadin] (https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)] (https://vaadin.com/directory/component/ <Dacelisl> <spinner-element>)
+[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/dacelislspinners)
+[![Published on NPM](https://img.shields.io/badge/NPM-Published-red.svg)](https://www.npmjs.com/package/spinner-element)
+
 
 # \<spinner-element\>
 
