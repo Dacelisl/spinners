@@ -71,16 +71,16 @@ class SpinnerElement extends PolymerElement {
     return {
 
       /**
+     * select any of the 9 types (default, bars, bubble, circle, 
+     * ripple, points, fold, cube, bounce) by default 'default'
+     * @type {String}
+     */
+      tipo: { type: String, value: '', reflectToAttribute: true, notify: true, observer: '__tipoChanged' },
+      /**
       * visibility of the spinner, by default 'false'
       * @type {Boolean}
       */
-      visible: { type: Boolean, value: false, observer: '__visibleChanged' },
-      /**
-      * select any of the 9 types (default, bars, bubble, circle, 
-      * ripple, points, fold, cube, bounce) by default 'default'
-      * @type {String}
-      */
-      tipo: { type: String, value: 'default',  observer: '__tipoChanged' },
+      visible: { type: Boolean, value: false, notify: true, reflectToAttribute: true, observer: '__visibleChanged' },
       /**
       * The spinner-element background-color, default '#b9b5b524'
       * @type {String}
@@ -90,7 +90,7 @@ class SpinnerElement extends PolymerElement {
       * activity time (milliseconds) of the spinner
       * @type {Number}
       */
-      duration: Number,
+      duration: { type: Number, reflectToAttribute: true, },
       /**
       * object used by iron-meta to access the selected spinner
       * @type {Object}
@@ -100,22 +100,25 @@ class SpinnerElement extends PolymerElement {
   }
 
   __tipoChanged(e) {
-    this.tipo = e;
+    if (e) {
+      this.tipo = e;
+    } else {
+      this.tipo = 'default';
+    }
   }
 
   __visibleChanged(e) {
-    try {
-      this.spinner = this.$.elmeta.byKey(this.tipo);
-      if (this.visible) {
-        this.spinner.visible = true;
-        if (this.duration) {
-          setTimeout(() => {
-            this.spinner.visible = false;
-          }, this.duration);
-        }
+    this.__tipoChanged(this.tipo)
+    this.spinner = this.$.elmeta.byKey(this.tipo);
+    if (e) {
+      this.spinner.visible = true;
+      if (this.duration) {
+        setTimeout(() => {
+          this.spinner.visible = false;
+        }, this.duration);
       }
-    } catch (error) {
-      console.log('no exist');
+    } else {
+      this.spinner.visible = false;
     }
   }
 }

@@ -5,10 +5,9 @@ import '@polymer/iron-meta/iron-meta.js';
 class StyleDefault extends PolymerElement {
     static get properties() {
         return {
-            visible: { type: Boolean, value: false, observer: 'visibleChanged' },
+            visible: { type: Boolean, value: false,notify: true, observer: 'visibleChanged' },
         }
     }
-
     static get template() {
         return html`
         <style include="default">
@@ -41,12 +40,11 @@ class StyleDefault extends PolymerElement {
     }
     visibleChanged(e) {
         var spin = this.$.default;
-        if (this.visible) {
+        if (e) {
             spin.style.display = "block";
         }else{
             spin.style.display = "none";
         }
     }
 }
-
 customElements.define('style-default', StyleDefault);
