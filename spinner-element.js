@@ -8,10 +8,13 @@
 * ```html
 * <spinner-element visible></spinner-element>
 * ```
+* ## Installation
+* 
+*  `npm install spinner-element"@0.0.3" --save` 
 * 
 * ## Polymer Element to display a spinner
 * 
-* the polymer element shows a spinner, which we can select any of the 9 types, (default, bars, bubble, circle, ripple, dots, folding, cube, bounce) but the type of spinner is specified, it will show the type 'default ', to activate it requires the' visible 'property
+* the polymer element shows a spinner, which we can select any of the 10 types, (default, bars, bubbles, circles, ripple, dots, folding, cube, bounce, infinity) but the type of spinner is specified, it will show the type 'default ', to activate it requires the' visible 'property
 * 
 * optionally we can set the activity time in milliseconds, if it is not set by default it is infinite
 * 
@@ -29,6 +32,8 @@
 * Custom property | Description | Default
 * ----------------|-------------|---------
 * --background-color-spinner | The spinner-element background-color | #b9b5b524
+* --background-border-infinity | background-color only for infinite spinner | #5d535314
+* --background-center-infinity | background-color only for infinite spinner | #ffffff00
 * 
 *   * @customElement
 *   * @polymer
@@ -47,6 +52,7 @@ import './src/style-cube';
 import './src/style-folding';
 import './src/style-default';
 import './src/style-ripple';
+import './src/style-infinity';
 
 
 class SpinnerElement extends PolymerElement {
@@ -64,6 +70,7 @@ class SpinnerElement extends PolymerElement {
     <style-default id="default"> </style-default>
     <style-folding id="folding"> </style-folding>
     <style-circles id="circles"></style-circles>
+    <style-infinity id="infinity" ></style-infinity>
 
     `;
   }
@@ -100,8 +107,12 @@ class SpinnerElement extends PolymerElement {
   }
 
   __tipoChanged(e) {
-    if (e) {
+    console.log('tipo ',e);
+    if (e && (e=='ripple' || e =='dots' || e =='bars' || 
+    e == 'bounce' || e == 'bubbles' || e == 'circles' 
+    || e == 'cube' || e == 'default' || e == 'folding' || e == 'infinity' )) {
       this.tipo = e;
+      console.log('tipo 2 ',e);
     } else {
       this.tipo = 'default';
     }
