@@ -7,7 +7,7 @@
 
 ## Description.
 
-varied set of spinners, you can choose any of the 9 types and additional you can edit the color, the time of activity and visibility.
+varied set of spinners, you can choose any of the 10 types and additional you can edit the color, the time of activity and visibility.
 
 Use `visible` to show the spinner:
 
@@ -15,9 +15,13 @@ Use `visible` to show the spinner:
 <spinner-element visible></spinner-element>
 ```
 
+## Installation
+
+`npm install spinner-element"@0.0.3" --save` 
+
 ## Polymer Element to display a spinner
 
-the polymer element shows a spinner, which we can select any of the 9 types, (default, bars, bubble, circle, ripple, dots, folding, cube, bounce) but the type of spinner is specified, it will show the type 'default ', to activate it requires the' visible 'property
+the polymer element shows a spinner, which we can select any of the 10 types, (default, bars, bubbles, circles, ripple, dots, folding, cube, bounce, infinity) but the type of spinner is specified, it will show the type 'default ', to activate it requires the' visible 'property
 
 optionally we can set the activity time in milliseconds, if it is not set by default it is infinite
 
@@ -35,6 +39,8 @@ The following custom properties are available for styling
 Custom property | Description | Default
 ----------------|-------------|---------
 --background-color-spinner | The spinner-element background-color | #b9b5b524
+--background-border-infinity | background-color only for infinite spinner | #5d535314
+--background-center-infinity | background-color only for infinite spinner | #ffffff00
 
 ## Usage
 

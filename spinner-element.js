@@ -1,7 +1,7 @@
 /* 
 * ## Description.
 * 
-* varied set of spinners, you can choose any of the 9 types and additional you can edit the color, the time of activity and visibility.
+* varied set of spinners, you can choose any of the 10 types and additional you can edit the color, the time of activity and visibility.
 * 
 * Use `visible` to show the spinner:
 * 
