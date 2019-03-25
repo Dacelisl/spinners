@@ -9,6 +9,7 @@ $_documentContainer.innerHTML = `<dom-module id="infinity">
       .infinity {
         background-image: radial-gradient(circle farthest-corner at center, var(--background-center-infinity, #ffffff00) 0%, var(--background-border-infinity,#ffffff00) 100%);
         position: relative;
+        margin: 100px auto;
         text-align: center;
         top: calc(50% - 32px);
         left: calc(50% - 32px);

@@ -17,6 +17,8 @@
   "license": "MIT",
   "dependencies": {
     "@polymer/iron-meta": "^3.0.1",
+    "@polymer/paper-item": "^3.0.1",
+    "@polymer/paper-listbox": "^3.0.1",
     "@polymer/polymer": "^3.0.0"
   },
   "devDependencies": {

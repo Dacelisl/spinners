@@ -82,7 +82,7 @@ class SpinnerElement extends PolymerElement {
      * ripple, points, fold, cube, bounce) by default 'default'
      * @type {String}
      */
-      tipo: { type: String, value: '', reflectToAttribute: true, notify: true, observer: '__tipoChanged' },
+      tipo: { type: String, value: '', reflectToAttribute: true, observer: '__tipoChanged' },
       /**
       * visibility of the spinner, by default 'false'
       * @type {Boolean}
@@ -107,20 +107,18 @@ class SpinnerElement extends PolymerElement {
   }
 
   __tipoChanged(e) {
-    console.log('tipo ',e);
     if (e && (e=='ripple' || e =='dots' || e =='bars' || 
     e == 'bounce' || e == 'bubbles' || e == 'circles' 
     || e == 'cube' || e == 'default' || e == 'folding' || e == 'infinity' )) {
       this.tipo = e;
-      console.log('tipo 2 ',e);
     } else {
       this.tipo = 'default';
     }
+    this.spinner = this.$.elmeta.byKey(this.tipo);
   }
 
   __visibleChanged(e) {
     this.__tipoChanged(this.tipo)
-    this.spinner = this.$.elmeta.byKey(this.tipo);
     if (e) {
       this.spinner.visible = true;
       if (this.duration) {

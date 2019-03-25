@@ -6,7 +6,7 @@ $_documentContainer.innerHTML = `<dom-module id="folding">
   <template>
     <style>
     .sk-folding-cube {
-        margin: 20px auto;
+        margin: 100px auto;
         width: 40px;
         height: 40px;
         position: relative;
