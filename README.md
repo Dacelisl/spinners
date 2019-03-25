@@ -1,5 +1,6 @@
 [![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/dacelislspinners)
 [![Published on NPM](https://img.shields.io/badge/NPM-Published-red.svg)](https://www.npmjs.com/package/spinner-element)
+![License - MIT](https://img.shields.io/github/license/dacelisl/confirm-element.svg)
 
 
 # \<spinner-element\>
@@ -17,7 +18,7 @@ Use `visible` to show the spinner:
 
 ## Installation
 
-`npm install spinner-element"@0.0.3" --save` 
+`npm install spinner-element"@0.0.4" --save` 
 
 ## Polymer Element to display a spinner
 
@@ -32,6 +33,10 @@ optionally we can set the activity time in milliseconds, if it is not set by def
     duration="3000"
 ></spinner-element>
 ```
+
+![Screenshot of confirm-element](https://raw.githubusercontent.com/Dacelisl/spinners/master/spinner-element.gif)
+
+
 
 ## Styling
 The following custom properties are available for styling
